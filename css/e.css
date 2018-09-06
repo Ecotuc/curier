@@ -7,6 +7,16 @@
     color: black;
 }
 
-.contenedor-inputs{
-	border-radius: 6px;
+.nav_logo{
+	margin-top: 7px;
+	margin-left: -7px;
+	margin-right: 7px;
+	width: 130px;
+	height: 35px;
+}
+
+.body_logo{
+	margin-top: 8%;
+	width: 1000px;
+	height: 400px;
 }

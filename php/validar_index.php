@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Index</title>
-		<link rel="stylesheet" type="text/css" href="./css/e.css">
+		<link rel="stylesheet" type="text/css" href="../css/e.css">
 		<link rel="icon" type="imgage/png" href="../images/tab_logo.png" sizes="32x32">
 	</head>
 
@@ -15,7 +15,7 @@
 	$usuario=$_POST['usuario'];
 	$_SESSION['usuario'] = $usuario;
 	$contraseña=$_POST['contraseña'];
-
+echo "Usuario: ",$usuario, " contra: ", $contraseña;
 	$f1=0;
 	$f2=0;
 
@@ -27,10 +27,10 @@
 			$f2=1;
 		}
 		if(($f1==1)&&($f2==1)){
-			$dbconn = pg_connect("host=localhost dbname=ProyectoCC user=postgres password=1998")
+			$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998")
 				or die('Could not connect: ' . pg_last_error());
 
-			$query = "SELECT * FROM users WHERE '$usuario'=usuario AND '$contraseña'=pswrd";
+			$query = "SELECT * FROM users WHERE '$usuario'=username AND '$contraseña'=password";
 			$result = pg_query($dbconn, $query) or die('Query failed: ' . pg_last_error());
 
 			$rows = pg_num_rows($result);
@@ -46,7 +46,7 @@
 				echo "<h2 class='form-titulo'>Contraseña o usuario incorrecto</h2>";
     			echo "<script>
             		setTimeout(function() {
-                    location.href = 'index.php';
+                    location.href = 'index.html';
             		}, 2000);
         			</script>";
 			}
