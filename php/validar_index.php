@@ -3,19 +3,18 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Index</title>
-		<link rel="stylesheet" type="text/css" href="../css/e2.css">
+		<link rel="stylesheet" type="text/css" href="../css/estilo.css">
 		<link rel="icon" type="imgage/png" href="../images/tab_logo.png" sizes="32x32">
 	</head>
 
 <?php
 
 	session_start();
-	error_reporting(0);
+	error_reporting(0);y
 
 	$usuario=$_POST['usuario'];
 	$_SESSION['usuario'] = $usuario;
 	$contraseña=$_POST['contraseña'];
-echo "Usuario: ",$usuario, " contra: ", $contraseña;
 	$f1=0;
 	$f2=0;
 

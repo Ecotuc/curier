@@ -8,7 +8,7 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link href="../css/e.css" rel="stylesheet" type="text/css">
+	<link href="../css/estilo.css" rel="stylesheet" type="text/css">
 	<link rel="icon" type="imgage/png" href="../images/tab_logo.png" sizes="32x32">
 </head>
 <body class="fondo">
@@ -18,9 +18,19 @@
 	      <img class="nav_logo" src="../images/nav_logo.png">
 	    </div>
 	    <ul class="nav navbar-nav">
-	      <li class="active"><a href="#">Home</a></li>
-	      <li><a href="#">Page 1</a></li>
-	      <li><a href="#">Page 2</a></li>
+      		<?php
+				if(!($varsesion =='admin')){
+						echo "<li class=\"active\"><a href=\"welcome.php\">Ingresar ordenes</a></li>";
+				}
+			 ?>
+			<?php
+				if($varsesion =='admin'){
+						echo "<li><a href=\"welcome.php\">Ingresar ordenes</a></li>";
+						echo "<li class=\"active\"><a href=\"tiendas.php\">Ingresar Tienda</a></li>
+          				<li><a href=\"costos.php\">Ingresar costos</a></li>";
+				}
+			 ?>
+			<li><a href="cerrarsesion.php">Cerrar Sesión</a></li>
 	    </ul>
 	  </div>
 	</nav>
