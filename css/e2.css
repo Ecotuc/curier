@@ -1,8 +1,12 @@
 .fondo{
-	background-image: url(../images/back.jpg);
+	background-image: url(../images/back1.jpg);
 	background-size: 100%;
 }
 
+.fondo2{
+	background-image: url(../images/original.jpg);
+	background-size: 100%;
+}
 ::placeholder {
     color: black;
 }
@@ -24,7 +28,12 @@
 .form-register{
 	width: 95%;
 	max-width: 500px;
-	margin: auto;
 	background: white;
 	border-radius: 7px;
+	margin-left: 10px;
+	margin-top: 150px;
+}
+
+label{
+	color:#130f40;
 }

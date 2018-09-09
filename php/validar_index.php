@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Index</title>
-		<link rel="stylesheet" type="text/css" href="../css/e.css">
+		<link rel="stylesheet" type="text/css" href="../css/e2.css">
 		<link rel="icon" type="imgage/png" href="../images/tab_logo.png" sizes="32x32">
 	</head>
 
