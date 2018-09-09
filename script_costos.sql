@@ -76,3 +76,4 @@ INSERT INTO costos(origen, destino, idd, precio) VALUES ('Suchitepéquez', 'Escu
 INSERT INTO costos(origen, destino, idd, precio) VALUES ('Suchitepéquez', 'Retahuleu', )
 INSERT INTO costos(origen, destino, idd, precio) VALUES ('Suchitepéquez', 'San Marcos', )
 INSERT INTO costos(origen, destino, idd, precio) VALUES ('Suchitepéquez', 'Suchitepéquez', )
+
