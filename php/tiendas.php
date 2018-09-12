@@ -6,7 +6,7 @@
 			echo "<body class='fondo'>";
 				echo "<script>
 							alert(\"Debe iniciar sesión\");
-							window.location= 'index.html'
+							window.location= 'index.html';
 						</script>";
 		}
 	?>
@@ -36,9 +36,9 @@
 				
 				}elseif($varsesion =='admin'){
 						echo "<li><a href=\"welcome.php\">Ingresar ordenes</a></li>";
-						echo "<li><a href=\"tiendas.php\">Ingresar Tienda</a></li>
+						echo "<li class=\"active\"><a href=\"tiendas.php\">Ingresar Tienda</a></li>
           				<li><a href=\"costos.php\">Ingresar costos</a></li>
-          				<li class=\"active\"><a href=\"cotizacion.php\">Cotización</a></li>
+          				<li><a href=\"cotizacion.php\">Cotización</a></li>
           				<li><a href=\"cerrarsesion.php\">Cerrar Sesión</a></li>";
 				}elseif ($varsesion == 'local') {
 					echo"<li><a href=\"index.html\">Home</a></li>

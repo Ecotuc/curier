@@ -45,9 +45,41 @@
 	    </ul>
 	  </div>
 	</nav>
+	<form class="form_status"method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+		<label for="orden">Número de orden</label>
+		<input type="text" name="orden" placeholder="Ejemplo 11111">
+		<button type="submit" class="btn btn-primary col-md-5" name="submit">Rastrear pedido</button>
+	</form>
+	<center>
+	<?php 
+		$status = 0;
+		$order=$_POST['orden'];
+		if(isset($_POST['submit'])){
+		$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998")
+			or die('Could not connect: ' . pg_last_error());
+		$query = "SELECT status FROM ordenes
+				  WHERE orden = '$order'";
+		$result = pg_query($dbconn, $query) or die('Query failed: ' . pg_last_error());
+		$row = pg_fetch_row($result);
+		$status = $row[0];
+		echo "<br><br><br>El número de orden es: ", $order," <br><br><br>
+			  El status de la orden es: <h1>", $status, "</h1><br><br><br>";
+
+		}
+
+	?>
+  	</center>
+
+
+
+
+
 
 
 
 	
+
+
+
 </body>
 </html>

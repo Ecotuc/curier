@@ -50,18 +50,11 @@
 
 <?php
 
-	session_start();
-	error_reporting(0);
-
-	$_SESSION['usuario'] = $usuario;
 	$destinatario=$_POST['destin'];
 	$dire=$_POST['dir'];
 	$destino=$_POST['dest'];
 	$origen= '01000'; //guatemala
 	$status=1;
-
-	echo $destinatario;
-
 	if(isset($_POST['submit'])){
 		$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998")
 			or die('Could not connect: ' . pg_last_error());
@@ -72,7 +65,10 @@
 		if($result){
 			pg_free_result($result);
 			pg_close($dbconn);
-			echo "Orden ingresada con éxito";
+			echo "Hola<script>
+                    location.href = 'welcome.php'
+            		alert(\"Orden ingresada exitosamente\")
+        			</script>";
 		}else {
 			pg_free_result($result);
 			pg_close($dbconn);
