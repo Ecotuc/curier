@@ -1,17 +1,15 @@
-<?php
-	session_start();
-	error_reporting(0);
-	$varsesion = $_SESSION['usuario'];
-	if($varsesion == null || $varsesion == '' || !($varsesion == 'admin')){
-		echo "<body class='fondo'>";
-		echo "<h2 class='form-titulo'>Debe iniciar como administrador para ingresar</h2>";
-			echo "<script>
-						setTimeout(function() {
-								location.href = 'index.html';
-						}, 2000);
-					</script>";
-	}
-?>
+	<?php
+		session_start();
+		error_reporting(0);
+		$varsesion = $_SESSION['usuario'];
+		if($varsesion == null || $varsesion == '' || $varsesion == 'local' ||!($varsesion=='admin')){
+			echo "<body class='fondo'>";
+				echo "<script>
+							alert(\"Debe iniciar sesión\");
+							window.location= 'index.html'
+						</script>";
+		}
+	?>
 
 <!DOCTYPE html>
 <html>
@@ -31,18 +29,22 @@
 	    </div>
 	    <ul class="nav navbar-nav">
       		<?php
-				if(!($varsesion =='admin')){
-						echo "<li class=\"active\"><a href=\"welcome.php\">Ingresar ordenes</a></li>";
-				}
-			 ?>
-			<?php
-				if($varsesion =='admin'){
+				if(!($varsesion =='admin') && !($varsesion == 'local')){
+						echo "<li><a href=\"welcome.php\">Ingresar ordenes</a></li>
+						<li class=\"active\"><a href=\"cotizacion.php\">Cotización</a></li>
+						<li><a href=\"cerrarsesion.php\">Cerrar Sesión</a></li>";
+				
+				}elseif($varsesion =='admin'){
 						echo "<li><a href=\"welcome.php\">Ingresar ordenes</a></li>";
-						echo "<li class=\"active\"><a href=\"tiendas.php\">Ingresar Tienda</a></li>
-          				<li><a href=\"costos.php\">Ingresar costos</a></li>";
+						echo "<li><a href=\"tiendas.php\">Ingresar Tienda</a></li>
+          				<li><a href=\"costos.php\">Ingresar costos</a></li>
+          				<li class=\"active\"><a href=\"cotizacion.php\">Cotización</a></li>
+          				<li><a href=\"cerrarsesion.php\">Cerrar Sesión</a></li>";
+				}elseif ($varsesion == 'local') {
+					echo"<li><a href=\"index.html\">Home</a></li>
+	     			 <li class=\"active\"><a href=\"cotizacion.php\">Cotización</a></li>";
 				}
 			 ?>
-			<li><a href="cerrarsesion.php">Cerrar Sesión</a></li>
 	    </ul>
 	  </div>
 	</nav>
@@ -53,11 +55,11 @@
 		    <div class="form-row">
 		      <div class="form-group col-md-6">
 		        <label for="inputname">Nombre</label>
-		        <input type="text" class="form-control" id="inputname" placeholder="Nombre de la tienda" name="nombre">
+		        <input type="text" class="form-control" id="inputname" placeholder="Nombre de la tienda" name="nombre" required>
 		      </div>
 		      <div class="form-group col-md-6">
 		        <label for="inputAddress">Dirección</label>
-		        <input type="text" class="form-control" id="inputAddress" placeholder="10a Calle 10-30 Z17" name="dir">
+		        <input type="text" class="form-control" id="inputAddress" placeholder="10a Calle 10-30 Z17" name="dir" required>
 		      </div>
 		    </div>
 		    <!-- <div class="col-md-3"></div> -->

@@ -10,7 +10,7 @@
 <?php
 
 	session_start();
-	error_reporting(0);y
+	error_reporting(0);
 
 	$usuario=$_POST['usuario'];
 	$_SESSION['usuario'] = $usuario;
