@@ -1,26 +1,15 @@
-	<?php
-		session_start();
-		error_reporting(0);
-		$varsesion = $_SESSION['usuario'];
-		echo $varsesion;
-
-		if($varsesion == null || $varsesion == '' || $varsesion == 'local' ||!($varsesion=='admin')){
-			echo "<body class='fondo'>";
-				echo "<script>
-							alert(\"Debe iniciar sesión\");
-							window.location= 'index.html'
-						</script>";
-		}
-	?>
-
+<?php
+	session_start();
+	error_reporting(0);
+	$varsesion = $_SESSION['usuario'];
+	if($varsesion == null || $varsesion == ''){
+		$varsesion= 'local';
+	}
+?>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>DHL | Guatemala | <?php echo $varsesion; ?></title>
-		<link href="../css/estilo.css" rel="stylesheet" type="text/css">
-		<link rel="icon" type="imgage/png" href="../images/tab_logo.png" sizes="32x32">
-	</head>
+<head>
+	<title>DHL | Guatemala</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -28,6 +17,8 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link href="../css/estilo.css" rel="stylesheet" type="text/css">
 	<link rel="icon" type="imgage/png" href="../images/tab_logo.png" sizes="32x32">
+</head>
+<body class="fondo">
 	<nav class="navbar navbar-inverse">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
@@ -54,38 +45,24 @@
 	    </ul>
 	  </div>
 	</nav>
-
-<?php
-
-	$name=$_POST['nombre'];
-	$dire=$_POST['dir'];
-	$origen=$_POST['dest'];
-
-	if(isset($_POST['submit'])){
-		$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998")
-			or die('Could not connect: ' . pg_last_error());
-		$query = "INSERT INTO tienda VALUES('$name', '$dire', '$origen')";
-		$result = pg_query($dbconn, $query) or die('Query failed: ' . pg_last_error());
-		if($result){
-			pg_free_result($result);
-			pg_close($dbconn);
-			echo "Tienda agregada con éxito";
-			 header("location:tiendas.php");
-		}else {
-			pg_free_result($result);
-			pg_close($dbconn);
-			echo "Por favor inténtelo de nuevo más tarde.";
-			echo "<script>
-            		setTimeout(function() {
-                    location.href = 'welcome.php';
-            		}, 2000);
-        			</script>";
-			
-		}
+	<form class="form_status" action="PHP_SELF" method="POST">
+		<label for="orden">Número de orden</label>
+		<input type="text" name="orden" placeholder="Ejemplo 11111">
+	</form>
+	<?php 
+		
+	?>
 
 
 
-	}
-?>
 
+
+
+
+
+	
+
+
+
+</body>
 </html>

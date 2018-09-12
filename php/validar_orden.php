@@ -2,15 +2,13 @@
 	session_start();
 	error_reporting(0);
 	$varsesion = $_SESSION['usuario'];
-	if($varsesion == null || $varsesion == '' || !($varsesion== 'admin')){
-		echo "<body class='fondo'>";
-		echo "<h2 class='form-titulo'>Debe iniciar como usuario existente para ingresar</h2>";
-			echo "<script>
-						setTimeout(function() {
-								location.href = 'index.html';
-						}, 2000);
-					</script>";
-	}
+	if($varsesion == null || $varsesion == '' || $varsesion == 'local' ||!($varsesion=='admin')){
+			echo "<body class='fondo'>";
+				echo "<script>
+							alert(\"Debe iniciar sesión\");
+							window.location= 'index.html'
+						</script>";
+		}
 ?>
 <!DOCTYPE html>
 <html>

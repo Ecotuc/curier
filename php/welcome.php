@@ -2,13 +2,11 @@
 		session_start();
 		error_reporting(0);
 		$varsesion = $_SESSION['usuario'];
-		if($varsesion == null || $varsesion == ''){
+		if($varsesion == null || $varsesion == '' || $varsesion == 'local' ||!($varsesion=='admin')){
 			echo "<body class='fondo'>";
-			echo "<h2 class='form-titulo'>Debe iniciar como usuario existente para ingresar</h2>";
 				echo "<script>
-							setTimeout(function() {
-									location.href = 'index.html';
-							}, 2000);
+							alert(\"Debe iniciar sesión\");
+							window.location= 'index.html'
 						</script>";
 		}
 	?>
@@ -31,18 +29,22 @@
 	    </div>
 	    <ul class="nav navbar-nav">
       		<?php
-				if(!($varsesion =='admin')){
-						echo "<li class=\"active\"><a href=\"welcome.php\">Ingresar ordenes</a></li>";
+				if(!($varsesion =='admin') && !($varsesion == 'local')){
+						echo "<li class=\"active\"><a href=\"welcome.php\">Ingresar ordenes</a></li>
+						<li><a href=\"cotizacion.php\">Cotización</a></li>
+						<li><a href=\"cerrarsesion.php\">Cerrar Sesión</a></li>";
+				
+				}else if($varsesion =='admin'){
+						echo "<li class=\"active\"><a href=\"welcome.php\">Ingresar ordenes</a></li>
+						<li><a href=\"tiendas.php\">Ingresar Tienda</a></li>
+          				<li><a href=\"costos.php\">Ingresar costos</a></li>
+          				<li><a href=\"cotizacion.php\">Cotización</a></li>
+          				<li><a href=\"cerrarsesion.php\">Cerrar Sesión</a></li>";
+				}else if ($varsesion == 'local') {
+					echo"<li><a href=\"index.html\">Home</a></li>
+	     			 <li class=\"active\"><a href=\"cotizacion.php\">Cotización</a></li>";
 				}
-			 ?>
-			<?php
-				if($varsesion =='admin'){
-						echo "<li class=\"active\"><a href=\"welcome.php\">Ingresar ordenes</a></li>";
-						echo "<li><a href=\"tiendas.php\">Ingresar Tienda</a></li>
-          				<li><a href=\"costos.php\">Ingresar costos</a></li>";
-				}
-			 ?>
-			<li><a href="cerrarsesion.php">Cerrar Sesión</a></li>
+			?>
 	    </ul>
 	  </div>
 	</nav>
