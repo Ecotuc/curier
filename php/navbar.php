@@ -42,22 +42,22 @@
       		<?php
 				if(!($varsesion =='admin') && !($varsesion == 'local')){
 						echo "<li><a id='welcome-option' href=\"welcome.php\">Ingresar ordenes</a></li>
-						<li><a href=\"cotizacion.php\">Cotización</a></li>
+						<li><a id='cotizacion-option' href=\"cotizacion.php\">Cotización</a></li>
 						<li><a id='status-option' href=\"status.php\">Status</a></li>
 						<li><a href=\"cerrarsesion.php\">Cerrar Sesión</a></li>
-						<li ><a id='status-option' href=\"#\">" ,$varsesion,"</a></li>";
+						<li><a href=\"#\">" ,$varsesion,"</a></li>";
 				
 				}else if($varsesion =='admin'){
 						echo "<li><a id='welcome-option' href=\"welcome.php\">Ingresar ordenes</a></li>
-						<li><a href=\"tiendas.php\">Ingresar Tienda</a></li>
-          				<li><a href=\"costos.php\">Ingresar costos</a></li>
-          				<li><a href=\"cotizacion.php\">Cotización</a></li>
+						<li><a id='tiendas-option' href=\"tiendas.php\">Ingresar Tienda</a></li>
+          				<li><a id='costos-option'href=\"costos.php\">Ingresar costos</a></li>
+          				<li><a id='cotizacion-option' href=\"cotizacion.php\">Cotización</a></li>
           				<li><a id='status-option' href=\"status.php\">Status</a></li>
           				<li><a href=\"cerrarsesion.php\">Cerrar Sesión</a></li>
-          				<li ><a id='status-option' href=\"#\">" ,$varsesion,"</a></li>";
+          				<li ><a href=\"#\">" ,$varsesion,"</a></li>";
 				}else if ($varsesion == 'local') {
 					echo"<li><a id='welcome-option' href=\"index.html\">Home</a></li>
-	     			 <li><a href=\"cotizacion.php\">Cotización</a></li>
+	     			 <li><a id='cotizacion-option' href=\"cotizacion.php\">Cotización</a></li>
 	     			 <li><a id='status-option' href=\"status.php\">Status</a></li>";
 				}
 			?>
@@ -75,5 +75,11 @@
 		console.log('hola');
 	}else if(lastPathSegment == "welcome.php"){
 		$('#welcome-option').addClass('active');
+	}else if(lastPathSegment == "cotizacion.php"){
+		$('#cotizacion-option').addClass('active');
+	}else if(lastPathSegment == "tiendas.php"){
+		$('#tiendas-option').addClass('active');
+	}else if(lastPathSegment == "costos.php"){
+		$('#costos-option').addClass('active');
 	}
 </script>

@@ -17,8 +17,18 @@
 	background: url(../images/w.png) no-repeat center center fixed;
 	background-size: 100%%;
 }
+
+.fondo5{
+	background: url(../images/cot3.jpg) no-repeat center center fixed;
+	background-size: 100%;
+}
 ::placeholder {
     color: black;
+}
+
+.new{
+	display: flex;
+	justify-content: space-around;
 }
 
 .nav_logo{
@@ -35,8 +45,8 @@
 	height: 400px;
 }
 
-.actve{
-	color: white	;
+.active ul li{
+	color:white;
 }
 
 .form-register{
@@ -47,13 +57,25 @@
 	margin-left: 10px;
 	margin-top: 150px;
 }
-.form_status{
+.form_cot{
 	width: 95%;
-	max-width: 50px;
+	max-width: 500px;
 	background: none;
 	border-radius: 7px;
+	margin-top: 200px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .form-register-tiendas{
+	width: 95%;
+	max-width: 500px;
+	background: white;
+	border-radius: 7px;
+	margin-top: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.form-register-status{
 	width: 95%;
 	max-width: 500px;
 	background: white;
@@ -66,7 +88,7 @@
 	height: 30px;
 	color: black;
 	text-indent: center;
-	font-size: 50px;
+	font-size: 118px;
 }
 .bp{
 	display: flex;
