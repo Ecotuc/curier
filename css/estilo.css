@@ -1,6 +1,6 @@
 .fondo{
 	background: url(../images/back1.jpg)no-repeat center center fixed;
-	background-size: 100%;
+	background-size: cover;
 }
 
 .fondo2{
@@ -9,18 +9,22 @@
 }
 
 .fondo3{
-	background: url(../images/mundo1.jpg) no-repeat center center fixed;
-	background-size: 100%;
+	background: url(../images/mundo2.jpg) no-repeat center center fixed;
+	background-size: cover;
 }
 
 .fondo4{
 	background: url(../images/w.png) no-repeat center center fixed;
-	background-size: 100%%;
+	background-size: cover;
 }
 
 .fondo5{
-	background: url(../images/cot3.jpg) no-repeat center center fixed;
-	background-size: 100%;
+	background: url(../images/cot6.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+.fondo6{
+	background: url(../images/costo.jpg) no-repeat center center fixed;
+	background-size: cover;
 }
 ::placeholder {
     color: black;
@@ -45,8 +49,8 @@
 	height: 400px;
 }
 
-.active ul li{
-	color:white;
+.esta{
+	color: white;
 }
 
 .form-register{
@@ -78,7 +82,7 @@
 .form-register-status{
 	width: 95%;
 	max-width: 500px;
-	background: white;
+	background: none;		;
 	border-radius: 7px;
 	margin-top: 200px;
 	margin-left: auto;
@@ -86,7 +90,7 @@
 }
 .progress{
 	height: 30px;
-	color: black;
+	color: white;
 	text-indent: center;
 	font-size: 118px;
 }

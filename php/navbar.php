@@ -71,15 +71,15 @@
 	var href = document.location.href;
 	var lastPathSegment = href.substr(href.lastIndexOf('/') + 1);
 	if(lastPathSegment == "status.php"){
-		$('#status-option').addClass('active');
+		$('#status-option').addClass('esta');
 		console.log('hola');
 	}else if(lastPathSegment == "welcome.php"){
-		$('#welcome-option').addClass('active');
+		$('#welcome-option').addClass('esta');
 	}else if(lastPathSegment == "cotizacion.php"){
-		$('#cotizacion-option').addClass('active');
+		$('#cotizacion-option').addClass('esta');
 	}else if(lastPathSegment == "tiendas.php"){
-		$('#tiendas-option').addClass('active');
+		$('#tiendas-option').addClass('esta');
 	}else if(lastPathSegment == "costos.php"){
-		$('#costos-option').addClass('active');
+		$('#costos-option').addClass('esta');
 	}
 </script>
