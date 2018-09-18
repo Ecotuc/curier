@@ -56,9 +56,7 @@
 	$origen= 'Guatemala'; //guatemala
 	$ido= '01000';
 	$status="1";
-
-	echo "El idd es: ", $idd, "<br>";
-	echo "El ido es: ", $ido, "<br>";
+	$tienda="local"
 	switch ($idd) {
 		case '01000':
 			$destino = 'Guatemala';
@@ -83,18 +81,17 @@
 			break;
 
 	}
-	echo "El destino es: ", $destino, "<br>";
 	if(isset($_POST['submit'])){
 		$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998")
 			or die('Could not connect: ' . pg_last_error());
 
-		$query = "INSERT INTO ordenes (status, destinatario, direccion, destino, origen, idd, ido) VALUES('$status', '$destinatario', '$dire', '$destino', '$origen', '$idd', '$ido')";
+		$query = "INSERT INTO ordenes (status, destinatario, direccion, destino, origen, idd, ido, tienda) VALUES('$status', '$destinatario', '$dire', '$destino', '$origen', '$idd', '$ido', '$tienda')";
 		$result = pg_query($dbconn, $query) or die('Query failed: ' . pg_last_error());
 
 		if($result){
 			pg_free_result($result);
 			pg_close($dbconn);
-			echo "Hola<script>
+			echo "<script>
                     location.href = 'welcome.php'
             		alert(\"Orden ingresada exitosamente\")
         			</script>";
@@ -109,9 +106,6 @@
         			</script>";
 			
 		}
-
-
-
 	}
 ?>
 
