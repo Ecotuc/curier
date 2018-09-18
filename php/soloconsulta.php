@@ -1,29 +1,23 @@
 <?php
 
+	error_reporting(0);
+
 	$destinov = $_GET['destino'];
 	$formato = $_GET['formato'];
-	$formato = strtolower($formato);
+	$inTouch = isset($formato);
+	if($inTouch==TRUE){
+		$formato = strtolower($formato);
+	}
 	$courrierv = "DHL";
 	$coberturav = "FALSE";
 	$costov = "0";
 
-		$xml= new DomDocument('1.0');
-		$xml->formatOutput=true;
+	if($formato=='json'){
+		$json = "{\"consultaprecio\" :\n";
+		$json = $json . "\t{\"courrier\" : \"FeDex\" ,\n";
+		$json = $json . "\t \"destino\" : \"". $destino ."\" ,\n";
+		$json = $json . "\t \"cobertura\" : \"TRUE\" ,\n\t \"costo\" : \"".$costo."\"\n\t}\n}";
+	}
 
-		$consulta=$xml->createElement("consultaprecio");
-		$xml->appendChild($consulta);
-
-		$courier=$xml->createElement("courier", $courrierv);
-		$consulta->appendChild($courier);
-
-		$destino=$xml->createElement("destino", $destinov);
-		$consulta->appendChild($destino);
-
-		$cobertura=$xml->createElement("cobertura", $coberturav);
-		$consulta->appendChild($cobertura);
-
-		$costo=$xml->createElement("costo",$costov);
-		$consulta->appendChild($costo);
-
-		echo "<xmp>".$xml->saveXML()."</xmp>";
+	echo $json;
 ?>
