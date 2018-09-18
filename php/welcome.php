@@ -8,11 +8,11 @@
 	    <div class="form-row">
 	      <div class="form-group col-md-6">
 	        <label for="inputname">Destinatario</label>
-	        <input type="text" class="form-control" id="inputname" placeholder="Nombre de quien recibe" name="destin">
+	        <input type="text" class="form-control" id="inputname" placeholder="Nombre de quien recibe" name="destin" required>
 	      </div>
 	      <div class="form-group col-md-6">
 	        <label for="inputAddress">Dirección</label>
-	        <input type="text" class="form-control" id="inputAddress" placeholder="10a Calle 10-30 Z17" name="dir">
+	        <input type="text" class="form-control" id="inputAddress" placeholder="10a Calle 10-30 Z17" name="dir"required>
 	      </div>
 	    </div>
 	    <div class="form-group col-md-6">
@@ -36,7 +36,7 @@
 
 
 
-	<div class="divcenter" style="overflow-y:auto;">
+	<div class="divcenter hola">
 		
 		<table>
 		  <tr>

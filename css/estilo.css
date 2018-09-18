@@ -102,7 +102,16 @@ tr{
 	max-width: 500px;
 	background: white;
 	border-radius: 7px;
-	margin-top: 200px;
+	margin-top: 260px;
+	margin-left: 60px;
+	margin-right: auto;
+}
+.form-register-costos{
+	width: 100%;
+	max-width: 600px;
+	background: none;
+	border-radius: 7px;
+	margin-top: 260px;
 	margin-left: auto;
 	margin-right: auto;
 }

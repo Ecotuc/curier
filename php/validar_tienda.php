@@ -2,7 +2,6 @@
 		session_start();
 		error_reporting(0);
 		$varsesion = $_SESSION['usuario'];
-		echo $varsesion;
 
 		if($varsesion == null || $varsesion == '' || $varsesion == 'local' ||!($varsesion=='admin')){
 			echo "<body class='fondo'>";
@@ -60,11 +59,12 @@
 	$name=$_POST['nombre'];
 	$dire=$_POST['dir'];
 	$origen=$_POST['dest'];
+	$ip=$_POST['ip'];
 
 	if(isset($_POST['submit'])){
 		$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998")
 			or die('Could not connect: ' . pg_last_error());
-		$query = "INSERT INTO tienda VALUES('$name', '$dire', '$origen')";
+		$query = "INSERT INTO tienda VALUES('$name', '$dire', '$origen', '$ip')";
 		$result = pg_query($dbconn, $query) or die('Query failed: ' . pg_last_error());
 		if($result){
 			pg_free_result($result);
