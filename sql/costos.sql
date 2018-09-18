@@ -1,8 +1,9 @@
-CREATE TABLE costos
+CREATE TABLE public.costos
 (
+    idd character(5) NOT NULL,
+    ido character(5) NOT NULL,
     destino character(20) NOT NULL,
     origen character(20) NOT NULL,
-    idd integer NOT NULL,
-    precio integer NOT NULL,
-    PRIMARY KEY (destino, origen)
-)
+    precio character(2) NOT NULL,
+    CONSTRAINT costos_pkey PRIMARY KEY (idd, ido)
+);
