@@ -52,14 +52,39 @@
 
 	$destinatario=$_POST['destin'];
 	$dire=$_POST['dir'];
-	$destino=$_POST['dest'];
-	$origen= '01000'; //guatemala
-	$status=1;
+	$idd=$_POST['dest'];
+	$origen= 'Guatemala'; //guatemala
+	$ido= '01000';
+	$status="1";
+	switch ($idd) {
+		case '01000':
+			$destino = 'Guatemala';
+			break;
+		case '04000':
+			$destino = 'Chimaltenango';
+			break;
+		case '03000':
+			$destino = 'Sacatepequez';
+			break;
+		case '05000':
+			$destino = 'Escuintla';
+			break;
+		case '11000':
+			$destino = 'Retahuleu';
+			break;
+		case '12000':
+			$destino = 'San Marcos';
+			break;
+		case '10000':
+			$destino = 'Suchitepequez';
+			break;
+
+	}
 	if(isset($_POST['submit'])){
 		$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998")
 			or die('Could not connect: ' . pg_last_error());
 
-		$query = "INSERT INTO ordenes (status, destinatario, direccion, destino, origen) VALUES('$status', '$destinatario', '$dire', '$destino', '$origen')";
+		$query = "INSERT INTO ordenes (status, destinatario, direccion, destino, origen, idd, ido) VALUES('$status', '$destinatario', '$dire', '$destino', '$origen', '$idd', '$ido')";
 		$result = pg_query($dbconn, $query) or die('Query failed: ' . pg_last_error());
 
 		if($result){
@@ -80,9 +105,6 @@
         			</script>";
 			
 		}
-
-
-
 	}
 ?>
 

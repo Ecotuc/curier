@@ -29,14 +29,15 @@
 				echo "<h2 class=''>Aquí podrá ver los precios del envío desde el orígen al destino.Si no aparece el depertamento que busca, significa que aún no tenemos cobertura en ese lugar, pero estamos trabajando en ello.</h2>
 			 	<div class=''></center>";
 			 	echo "<div class=\"form-row new\">";
-			 	echo "<select class='col-lg-4' name='origen' required>";
+			 	echo "<select class='col-lg-5' name='origen' sytle=\"height: 25px;\" required>";
 	 				echo "<option value='' disabled selected>Origen del paquete</option>";
 					while ($row = pg_fetch_row($result)){
 			 			echo "<option value='$row[0]'>$row[0]</option>";
 			 		}
-				echo "</select>";
+				echo "</select>
+					<div class='col-lg-2'></div>";
 						 
-				echo "<select class='col-lg-4' name='destino' required>";
+				echo "<select class='col-lg-5' name='destino' sytle=\"height: 25px;\"  required>";
 		 			echo "<option value='' disabled selected>Destino del paquete</option>";
 					while ($row = pg_fetch_row($result1)){
 			 			echo "<option value='$row[0]'>$row[0]</option>";
