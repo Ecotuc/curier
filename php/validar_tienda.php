@@ -59,11 +59,12 @@
 	$name=$_POST['nombre'];
 	$dire=$_POST['dir'];
 	$origen=$_POST['dest'];
+	$ido=$_POST['ido'];
 
 	if(isset($_POST['submit'])){
 		$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998")
 			or die('Could not connect: ' . pg_last_error());
-		$query = "INSERT INTO tienda VALUES('$name', '$dire', '$origen')";
+		$query = "INSERT INTO tienda VALUES('$name', '$dire', '$ido','$origen')";
 		$result = pg_query($dbconn, $query) or die('Query failed: ' . pg_last_error());
 		if($result){
 			pg_free_result($result);
