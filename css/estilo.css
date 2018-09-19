@@ -66,10 +66,7 @@
   height:50%;
   align-content: center;
 }
-.tabla{
-	display: flex;
-	justify-content: center;
-}
+
 table {
 	margin-top: 190px;
     border-collapse: collapse;
@@ -108,6 +105,7 @@ tr{
 	justify-content: space-around;
 	border-bottom: 1px solid #ddd;
 }
+
 .esta{
 	color: white;
 }
@@ -131,7 +129,7 @@ tr{
 .form-register-tiendas{
 	width: 95%;
 	max-width: 500px;
-	background: none;
+	background: nones;
 	border-radius: 7px;
 	margin-top: 260px;
 	margin-left: 60px;

@@ -3,6 +3,7 @@
 <head>
 	<title>DHL Guatemala | Ingreso de tiendas</title>
 	<?php include 'navbar.php' ?>
+	<link href="../css/et.css" rel="stylesheet" type="text/css">
 <body class="fondo3">
   <div class="tabla">
 	  <form class="form-register-tiendas" method="POST" action="validar_tienda.php">
@@ -31,51 +32,36 @@
 		    <div class="form-group col-md-6">
 		    </div>	    
 		    <div class="col-md-12"></div>
-		    <div class="col-md-1"></div>
-		    <button type="submit" class="btn btn-primary col-md-4" name="submit">Agregar nueva tienda</button>
+		    <div class="form-group col-md-4">
+		    	<button type="submit" class="btn btn-primary" name="submit">Agregar nueva tienda</button>
+		    </div>
 	  </form>
-	  <div class="nuevat">
-		<table class="nuet">
-		  <thead class="nuethe">
-			<tr class="nuetr">	
-			  <th class="nueth">Tienda</th>
-			  <th class="nueth">Dirección</th>
-			  <th class="nueth">Código Origen</th>
-			  <th class="nueth">Origen</th>
-			</tr>
-		  </thead>
-		  <tbody class="nuetb">
-			<?php
-		  		$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998") or die('Could not connect: ' . pg_last_error());
+	  <div>
+	  <table>
+			<thead>
+			  <tr>	
+			   <th>Tienda</th>
+			   <th>Dirección</th>
+			   <th>Código Origen</th>
+			   <th>Origen</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <?php
+			  	$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998") or die('Could not connect: ' . pg_last_error());
 				$query = "SELECT * FROM tienda";
 				$result = pg_query($query) or die('Query failed: ' . pg_last_error()); 
 				while ($row = pg_fetch_row($result)){
-				    echo "<tr class=\"nuetr\">
+				    echo "<tr>
 				      <th scope=\"row\">$row[0]</th>
-				      <td class=\"nuetd\">$row[1]</td>
-				      <td class=\"nuetd\">$row[2]</td>
-				      <td class=\"nuetd\">$row[3]</td>
+				      <td>$row[1]</td>
+				      <td>$row[2]</td>
+				      <td>$row[3]</td>
 				    </tr>";
 				}
-		  	?>
-		  	
-		  </tbody>
-		</table>
-  	<!-- 
-	  <?php 
-	  	$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998")
-			    			or die('Could not connect: ' . pg_last_error());
-
-						$query1 = "SELECT * FROM tienda ORDER BY nombre";
-
-						$resultado = pg_query($query1) or die('Query failed: ' . pg_last_error());
-
-						while ($row = pg_fetch_row($resultado)) {
-							$nombre=$row[0];
-							$lugar=$row[2];
-							echo $nombre, " : ", $lugar, "<br>";
-						}
-	  ?> -->
+			  ?> 	
+			</tbody>
+	  </table>
   </div>
 
 
