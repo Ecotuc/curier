@@ -22,61 +22,61 @@
 
 -- 10ma calle 10-30 Z17
 
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('01000', '01000','Guatemala', 'Guatemala',  '10' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('01000', '04000','Guatemala', 'Chimaltenango',  '20' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('01000', '03000','Guatemala', 'Sacatepequez',  '30' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('01000', '05000','Guatemala', 'Escuintla',  '40' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('01000', '11000','Guatemala', 'Retahuleu',  '50' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('01000', '12000','Guatemala', 'San Marcos',  '60' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('01000', '10000','Guatemala', 'Suchitepequez',  '70' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('01001', '01001','Guatemala', 'Guatemala',  '10' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('01001', '04001','Guatemala', 'Chimaltenango',  '20' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('01001', '03001','Guatemala', 'Sacatepequez',  '30' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('01001', '05001','Guatemala', 'Escuintla',  '40' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('01001', '11001','Guatemala', 'Retahuleu',  '50' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('01001', '12001','Guatemala', 'San Marcos',  '60' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('01001', '10001','Guatemala', 'Suchitepequez',  '70' );
 
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('04000', '01000','Chimaltenango', 'Guatemala',  '20' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('04000', '04000','Chimaltenango', 'Chimaltenango',  '10' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('04000', '03000','Chimaltenango', 'Sacatepequez',  '30' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('04000', '05000','Chimaltenango', 'Escuintla',  '40' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('04000', '11000','Chimaltenango', 'Retahuleu',  '50' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('04000', '12000','Chimaltenango', 'San Marcos',  '60' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('04000', '10000','Chimaltenango', 'Suchitepequez',  '70' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('04001', '01001','Chimaltenango', 'Guatemala',  '20' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('04001', '04001','Chimaltenango', 'Chimaltenango',  '10' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('04001', '03001','Chimaltenango', 'Sacatepequez',  '30' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('04001', '05001','Chimaltenango', 'Escuintla',  '40' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('04001', '11001','Chimaltenango', 'Retahuleu',  '50' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('04001', '12001','Chimaltenango', 'San Marcos',  '60' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('04001', '10001','Chimaltenango', 'Suchitepequez',  '70' );
 
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('03000', '01000','Sacatepequez', 'Guatemala',  '30' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('03000', '04000','Sacatepequez', 'Chimaltenango',  '20' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('03000', '03000','Sacatepequez', 'Sacatepequez',  '10' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('03000', '05000','Sacatepequez', 'Escuintla',  '40' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('03000', '11000','Sacatepequez', 'Retahuleu',  '50' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('03000', '12000','Sacatepequez', 'San Marcos',  '60' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('03000', '10000','Sacatepequez', 'Suchitepequez',  '70' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('03001', '01001','Sacatepequez', 'Guatemala',  '30' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('03001', '04001','Sacatepequez', 'Chimaltenango',  '20' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('03001', '03001','Sacatepequez', 'Sacatepequez',  '10' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('03001', '05001','Sacatepequez', 'Escuintla',  '40' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('03001', '11001','Sacatepequez', 'Retahuleu',  '50' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('03001', '12001','Sacatepequez', 'San Marcos',  '60' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('03001', '10001','Sacatepequez', 'Suchitepequez',  '70' );
 
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('05000', '01000','Escuintla', 'Guatemala',  '40' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('05000', '04000','Escuintla', 'Chimaltenango',  '20' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('05000', '03000','Escuintla', 'Sacatepequez',  '30' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('05000', '05000','Escuintla', 'Escuintla',  '10' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('05000', '11000','Escuintla', 'Retahuleu',  '50' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('05000', '12000','Escuintla', 'San Marcos',  '60' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('05000', '10000','Escuintla', 'Suchitepequez',  '70' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('05001', '01001','Escuintla', 'Guatemala',  '40' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('05001', '04001','Escuintla', 'Chimaltenango',  '20' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('05001', '03001','Escuintla', 'Sacatepequez',  '30' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('05001', '05001','Escuintla', 'Escuintla',  '10' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('05001', '11001','Escuintla', 'Retahuleu',  '50' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('05001', '12001','Escuintla', 'San Marcos',  '60' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('05001', '10001','Escuintla', 'Suchitepequez',  '70' );
 
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('11000', '01000','Retahuleu', 'Guatemala',  '50' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('11000', '04000','Retahuleu', 'Chimaltenango',  '20' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('11000', '03000','Retahuleu', 'Sacatepequez',  '30' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('11000', '05000','Retahuleu', 'Escuintla',  '40' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('11000', '11000','Retahuleu', 'Retahuleu',  '10' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('11000', '12000','Retahuleu', 'San Marcos',  '60' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('11000', '10000','Retahuleu', 'Suchitepequez',  '70' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('11001', '01001','Retahuleu', 'Guatemala',  '50' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('11001', '04001','Retahuleu', 'Chimaltenango',  '20' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('11001', '03001','Retahuleu', 'Sacatepequez',  '30' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('11001', '05001','Retahuleu', 'Escuintla',  '40' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('11001', '11001','Retahuleu', 'Retahuleu',  '10' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('11001', '12001','Retahuleu', 'San Marcos',  '60' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('11001', '10001','Retahuleu', 'Suchitepequez',  '70' );
 
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('12000', '01000','San Marcos', 'Guatemala',  '60' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('12000', '04000','San Marcos', 'Chimaltenango',  '20' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('12000', '03000','San Marcos', 'Sacatepequez',  '30' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('12000', '05000','San Marcos', 'Escuintla',  '40' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('12000', '11000','San Marcos', 'Retahuleu',  '50' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('12000', '12000','San Marcos', 'San Marcos',  '10' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('12000', '10000','San Marcos', 'Suchitepequez',  '70' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('12001', '01001','San Marcos', 'Guatemala',  '60' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('12001', '04001','San Marcos', 'Chimaltenango',  '20' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('12001', '03001','San Marcos', 'Sacatepequez',  '30' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('12001', '05001','San Marcos', 'Escuintla',  '40' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('12001', '11001','San Marcos', 'Retahuleu',  '50' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('12001', '12001','San Marcos', 'San Marcos',  '10' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('12001', '10001','San Marcos', 'Suchitepequez',  '70' );
 
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('10000', '01000','Suchitepequez', 'Guatemala',  '70' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('10000', '04000','Suchitepequez', 'Chimaltenango',  '20' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('10000', '03000','Suchitepequez', 'Sacatepequez',  '30' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('10000', '05000','Suchitepequez', 'Escuintla',  '40' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('10000', '11000','Suchitepequez', 'Retahuleu',  '50' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('10000', '12000','Suchitepequez', 'San Marcos',  '60' );
-INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('10000', '10000','Suchitepequez', 'Suchitepequez',  '10' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('10001', '01001','Suchitepequez', 'Guatemala',  '70' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('10001', '04001','Suchitepequez', 'Chimaltenango',  '20' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('10001', '03001','Suchitepequez', 'Sacatepequez',  '30' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('10001', '05001','Suchitepequez', 'Escuintla',  '40' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('10001', '11001','Suchitepequez', 'Retahuleu',  '50' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('10001', '12001','Suchitepequez', 'San Marcos',  '60' );
+INSERT INTO costos(idd, ido, destino, origen, precio) VALUES ('10001', '10001','Suchitepequez', 'Suchitepequez',  '10' );
 
 
 

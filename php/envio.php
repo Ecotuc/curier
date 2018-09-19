@@ -16,8 +16,9 @@
 	$query0 = "SELECT * FROM tienda WHERE nombre='$tienda'";
 	$result0 = pg_query($query0) or die ('Query failed: ' . pg_last_error());
 	$row = pg_fetch_row($result0);
-	$origen = $row[1];
+	$origen = $row[3];
 	$ido = $row[2];
+
 
 	$query1 = "SELECT destino FROM costos WHERE idd ='$idd'";
 	$result1 = pg_query($query1) or die ('Query failed: ' . pg_last_error());

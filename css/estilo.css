@@ -58,34 +58,65 @@
   height:50%;
   align-content: center;
 }
-
+.divcenter2 {
+  margin: auto;
+  margin-top: 2%;
+  padding: 1%;
+  width:70%;
+  height:50%;
+  align-content: center;
+}
+.tabla{
+	display: flex;
+	justify-content: center;
+}
 table {
+	margin-top: 190px;
     border-collapse: collapse;
-    width: 100%;
+    display:flex;
+    width:70%;
+    flex-direction: column;
+    margin-right:auto;
+    margin-left: auto;
 }
 
+tbody{
+	display:block;
+	overflow:auto;
+    height:222px;
+    width:100% 
+}
+thead tr{
+	display:inline-flex;
+	justify-content: space-around;
+	width: 100%;
+	margin: auto;
+
+
+}
 th, td {
     padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+    text-align: left; 
+    width: 20%; 
 }
 
 tr:hover {background-color:#576574;}
 tr{
 	background-color: #353b48;
 	color: white;
+	display:flex;
+	justify-content: space-around;
+	border-bottom: 1px solid #ddd;
 }
-
 .esta{
 	color: white;
 }
 
 .form-register{
 	width: 100%;
-	max-width: auto;
+	max-width: 100%;
 	background: none;
 	border-radius: 7px;
-	margin-left: 10px;
 	margin-top: 70px;
 }
 .form_cot{
@@ -100,7 +131,7 @@ tr{
 .form-register-tiendas{
 	width: 95%;
 	max-width: 500px;
-	background: white;
+	background: none;
 	border-radius: 7px;
 	margin-top: 260px;
 	margin-left: 60px;
@@ -131,10 +162,13 @@ tr{
 	font-size: 118px;
 }
 .bp{
-	display: flex;
-	justify-content: center;
+	overflow-x: hidden;
+	
 }
 
 label{
 	color:#130f40;
+}
+select{
+	height: 30px;
 }

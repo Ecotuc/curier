@@ -54,29 +54,29 @@
 	$dire=$_POST['dir'];
 	$idd=$_POST['dest'];
 	$origen= 'Guatemala'; //guatemala
-	$ido= '01000';
+	$ido= '01001';
 	$status="1";
-	$tienda="local"
+	$tienda="local";
 	switch ($idd) {
-		case '01000':
+		case '01001':
 			$destino = 'Guatemala';
 			break;
-		case '04000':
+		case '04001':
 			$destino = 'Chimaltenango';
 			break;
-		case '03000':
+		case '03001':
 			$destino = 'Sacatepequez';
 			break;
-		case '05000':
+		case '05001':
 			$destino = 'Escuintla';
 			break;
-		case '11000':
+		case '11001':
 			$destino = 'Retahuleu';
 			break;
-		case '12000':
+		case '12001':
 			$destino = 'San Marcos';
 			break;
-		case '10000':
+		case '10001':
 			$destino = 'Suchitepequez';
 			break;
 
