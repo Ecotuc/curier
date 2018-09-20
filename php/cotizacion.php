@@ -14,6 +14,8 @@
 	<?php include'navbar.php' ?>
 <body class="fondo5">
 	<?php
+		$origen=$_POST['origen'];
+		$destino=$_POST['destino'];
 
 		error_reporting(0);
 
@@ -30,17 +32,26 @@
 			 	<div class=''></center>";
 			 	echo "<div class=\"form-row new\">";
 			 	echo "<select class='col-lg-5' name='origen' required>";
-	 				echo "<option value='' disabled selected>Origen del paquete</option>";
+	 				echo "<option value='' disabled selected";
+	 				echo ">Origen del paquete</option>";
 					while ($row = pg_fetch_row($result)){
-			 			echo "<option value='$row[0]'>$row[0]</option>";
+			 			echo "<option value='$row[0]'";
+			 			if($row[0]==$origen){
+			 				echo "selected";
+			 			}
+			 			echo ">$row[0]</option>";
 			 		}
 				echo "</select>
 					<div class='col-lg-2'></div>";
 						 
 				echo "<select class='col-lg-5' name='destino' required>";
-		 			echo "<option value='' disabled selected>Destino del paquete</option>";
+		 			echo "<option value='' disabled selected >Destino del paquete</option>";
 					while ($row = pg_fetch_row($result1)){
-			 			echo "<option value='$row[0]'>$row[0]</option>";
+			 			echo "<option value='$row[0]'";
+			 			if($row[0]==$destino){
+			 				echo "selected";
+			 			}
+			 			echo ">$row[0]</option>";
 				 	}
 		 		echo "</select>";
 		 		echo "</div>";
@@ -74,10 +85,7 @@
 						if($rows1>0){
 							$row = pg_fetch_row($result2);
 							$precio = $row[4];
-							echo "El precio es: ";
-							echo "Q.";
-							echo $precio;
-							echo ".00";
+							echo "<input class=\"form-control\" type=\"text\" placeholder=\"El precio es: Q. $precio.00 \"readonly>";
 						}
 					}
 	 			echo "</div>";
