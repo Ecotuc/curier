@@ -2,13 +2,19 @@
 	session_start();
 	error_reporting(0);
 	$varsesion = $_SESSION['usuario'];
-	if($varsesion == null || $varsesion == '' || $varsesion == 'local' ||!($varsesion=='admin')){
-			echo "<body class='fondo'>";
-				echo "<script>
-							alert(\"Debe iniciar sesión\");
-							window.location= 'index.html'
-						</script>";
-		}
+	$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998") or die('Could not connect: ' . pg_last_error());
+				$query = "SELECT username FROM users";
+				$result = pg_query($query) or die('Query failed: ' . pg_last_error()); 
+				while ($row = pg_fetch_row($result)){
+					echo $row[0];
+					if($varsesion == null || $varsesion == '' || $varsesion == 'local' ||!($varsesion=='admin') || !($varsesion=='$row[0]')){
+						echo "<body class='fondo'>";
+							echo "<script>
+										alert(\"Debe iniciar sesión\");
+										window.location= 'index.html'
+									</script>";
+					}
+				}
 ?>
 <!DOCTYPE html>
 <html>

@@ -27,10 +27,6 @@
 	background: url(../images/costo.jpg) no-repeat center center fixed;
 	background-size: cover;
 }
-::placeholder {
-    color: black;
-}
-
 .new{
 	display: flex;
 	justify-content: space-around;
@@ -127,7 +123,7 @@ tr{
 .form-register-tiendas{
 	width: 95%;
 	max-width: 500px;
-	background: nones;
+	background: none;
 	border-radius: 7px;
 	margin-top: 260px;
 	margin-left: 60px;
@@ -145,7 +141,7 @@ tr{
 .form-register-status{
 	width: 95%;
 	max-width: 500px;
-	background: none;		;
+	background: none;		
 	border-radius: 7px;
 	margin-top: 200px;
 	margin-left: auto;
@@ -156,10 +152,7 @@ tr{
 	color: white;
 	text-indent: center;
 	font-size: 118px;
-}
-.bp{
-	overflow-x: hidden;
-	
+	margin-left: 8.3%;
 }
 
 label{

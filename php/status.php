@@ -22,22 +22,19 @@
 	$statusv = $row[0];
 
 	if(($formato=='xml')||($inTouch==FALSE)){
-		$xml= new DomDocument('1.0');
-		$xml->formatOutput=true;
 
-		$orden=$xml->createElement("orden");
-		$xml->appendChild($orden);
-
-		$courrier=$xml->createElement("courrier", $courrierv);
-		$orden->appendChild($courrier);
-
-		$numero=$xml->createElement("orden", $ordenv);
-		$orden->appendChild($numero);
-
-		$status=$xml->createElement("status", $statusv);
-		$orden->appendChild($status);
-
-		echo "<xmp>".$xml->saveXML()."</xmp>";
+		
+			if (!empty($ordenv)) {
+				echo "<orden>";
+				echo "\t<courrier>",$courrier,"</courrier>";
+				echo "\t<orden>",$ordenv,"</orden>";
+				echo "\t<status>",$statusv,"</status>";
+				echo "</orden>";
+			}else{
+				echo "Archivo vacio";
+			}
+			// Header('Content-type: text/xml');
+			// print($xml->asXML());
 
 	} else if($formato=='json'){
 		$json = "{\"orden\" :\n";
