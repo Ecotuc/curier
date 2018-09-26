@@ -24,7 +24,7 @@
 		if($result){
 			pg_free_result($result);
 			pg_close($dbconn);
-			echo "Tienda agregada con éxito";
+			echo "Costo agregado con éxito";
 			 header("location:tiendas.php");
 		}else {
 			pg_free_result($result);

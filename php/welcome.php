@@ -16,6 +16,18 @@
 	      </div>
 	    </div>
 	    <div class="form-group col-md-6">
+	      <label for="inputAddress">Lugar de origen</label>
+	      <select id="inputmunicipio" class="form-control col-md-3" name="origen">
+	      	<option value="01001" selected>Guatemala</option>
+	        <option value="04001">Chimaltenango</option>
+	        <option value="03001">Sacatepequez</option>
+	        <option value="05001">Escuintla</option>
+	        <option value="11001">Retahuleu</option>
+	        <option value="12001">San Marcos</option>
+	        <option value="10001">Suchitepequez</option>
+	      </select>
+	    </div>
+	    <div class="form-group col-md-6">
 	      <label for="inputAddress">Lugar de destino</label>
 	      <select id="inputmunicipio" class="form-control col-md-3" name="dest">
 	      	<option value="01001" selected>Guatemala</option>

@@ -5,17 +5,15 @@
 	$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998") or die('Could not connect: ' . pg_last_error());
 				$query = "SELECT username FROM users";
 				$result = pg_query($query) or die('Query failed: ' . pg_last_error()); 
+				$ver=0;
 				while ($row = pg_fetch_row($result)){
-					echo $row[0];
-					if($varsesion == null || $varsesion == '' || $varsesion == 'local' ||!($varsesion=='admin') || !($varsesion=='$row[0]')){
-						echo "<body class='fondo'>";
-							echo "<script>
-										alert(\"Debe iniciar sesión\");
-										window.location= 'index.html'
-									</script>";
+					if ($varsesion == $row[0]) {
+						$ver=1;
 					}
-				}
+				}		
+				
 ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -59,8 +57,7 @@
 	$destinatario=$_POST['destin'];
 	$dire=$_POST['dir'];
 	$idd=$_POST['dest'];
-	$origen= 'Guatemala'; //guatemala
-	$ido= '01001';
+	$ido= $_POST['origen'];
 	$status="1";
 	$tienda="local";
 	switch ($idd) {
@@ -84,6 +81,30 @@
 			break;
 		case '10001':
 			$destino = 'Suchitepequez';
+			break;
+
+	}
+	switch ($ido) {
+		case '01001':
+			$origen = 'Guatemala';
+			break;
+		case '04001':
+			$origen = 'Chimaltenango';
+			break;
+		case '03001':
+			$origen = 'Sacatepequez';
+			break;
+		case '05001':
+			$origen = 'Escuintla';
+			break;
+		case '11001':
+			$origen = 'Retahuleu';
+			break;
+		case '12001':
+			$origen = 'San Marcos';
+			break;
+		case '10001':
+			$origen = 'Suchitepequez';
 			break;
 
 	}
