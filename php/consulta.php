@@ -41,7 +41,6 @@
 			$json = $json . "\t{\"courrier\" : \"". $courrierv ."\" ,\n";
 			$json = $json . "\t \"destino\" : \"". $destinov ."\" ,\n";
 			$json = $json . "\t \"cobertura\" : \"".$coberturav."\" ,\n\t \"costo\" : \"".$costov."\"\n\t}\n}";
-
 			echo $json;
 		}
 

@@ -14,15 +14,21 @@
 		      </div>
 		      <div class="form-group col-md-6">
 		      <label for="inputAddress">Departamento al que pertenece</label>
-		      <select id="inputmunicipio" class="form-control col-md-3" name="dest">
-		      	<option value="Guatemala" selected>Guatemala</option>
-		        <option value="Chimaltenango">Chimaltenango</option>
-		        <option value="Sacatepequez">Sacatepequez</option>
-		        <option value="Escuintla">Escuintla</option>
-		        <option value="Retahuleu">Retahuleu</option>
-		        <option value="San Marcos">San Marcos</option>
-		        <option value="Suchitepequez">Suchitepequez</option>
-		      </select>
+		      <?php 
+		      	$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998") or die('Could not connect: ' . pg_last_error());
+		      	$query2 = "SELECT DISTINCT destino FROM costos";
+				$result1 = pg_query($query2) or die('Query failed: ' . pg_last_error());
+				echo "<select class='form-control col-md-3' name='dest' required>";
+		 			echo "<option value='' disabled selected >Nombre del departamento</option>";
+					while ($row = pg_fetch_row($result1)){
+			 			echo "<option value='$row[0]'";
+			 			if($row[0]==$destino){
+			 				echo "selected";
+			 			}
+			 			echo ">$row[0]</option>";
+				 	}
+		 		echo "</select>";
+	      ?>
 		    </div>
 		    </div>
 		    <div class="form-group col-md-6">

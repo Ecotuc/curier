@@ -38,10 +38,9 @@
 
 	} else if($formato=='json'){
 		$json = "{\"orden\" :\n";
-		$json = $json . "\t{\"courrier\" : \"". $courrier ."\" ,\n";
-		$json = $json . "\t \"orden\" : \"". $orden ."\" ,\n";
-		$json = $json . "\t \"status\" : \"".$status."\"\n\t}\n}";
-
+		$json = $json . "\t{\"courrier\" : \"". $courrierv ."\" ,\n";
+		$json = $json . "\t \"orden\" : \"". $ordenv ."\" ,\n";
+		$json = $json . "\t \"status\" : \"".$statusv."\"\n\t}\n}";
 		echo $json;
 
 	}

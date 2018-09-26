@@ -15,29 +15,42 @@
 	        <input type="text" class="form-control" id="inputAddress" placeholder="10a Calle 10-30 Z17" name="dir"required>
 	      </div>
 	    </div>
-	    <div class="form-group col-md-6">
+	    <div class="form-group col-md-5">
 	      <label for="inputAddress">Lugar de origen</label>
-	      <select id="inputmunicipio" class="form-control col-md-3" name="origen">
-	      	<option value="01001" selected>Guatemala</option>
-	        <option value="04001">Chimaltenango</option>
-	        <option value="03001">Sacatepequez</option>
-	        <option value="05001">Escuintla</option>
-	        <option value="11001">Retahuleu</option>
-	        <option value="12001">San Marcos</option>
-	        <option value="10001">Suchitepequez</option>
-	      </select>
+	      <?php 
+	      	$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998") or die('Could not connect: ' . pg_last_error());
+	      	$query = "SELECT DISTINCT origen FROM costos";
+			$result = pg_query($query) or die('Query failed: ' . pg_last_error());
+			echo "<select class='form-control col-md-3' name='origen' required>";
+	 				echo "<option value='' disabled selected";
+	 				echo ">Origen del paquete</option>";
+					while ($row = pg_fetch_row($result)){
+			 			echo "<option value='$row[0]'";
+			 			if($row[0]==$origen){
+			 				echo "selected";
+			 			}
+			 			echo ">$row[0]</option>";
+			 		}
+				echo "</select>
+					<div class='col-lg-2'></div>";
+	      ?>
 	    </div>
-	    <div class="form-group col-md-6">
+	    <div class="form-group col-md-5">
 	      <label for="inputAddress">Lugar de destino</label>
-	      <select id="inputmunicipio" class="form-control col-md-3" name="dest">
-	      	<option value="01001" selected>Guatemala</option>
-	        <option value="04001">Chimaltenango</option>
-	        <option value="03001">Sacatepequez</option>
-	        <option value="05001">Escuintla</option>
-	        <option value="11001">Retahuleu</option>
-	        <option value="12001">San Marcos</option>
-	        <option value="10001">Suchitepequez</option>
-	      </select>
+	      <?php 
+	      	$query2 = "SELECT DISTINCT destino FROM costos";
+			$result1 = pg_query($query2) or die('Query failed: ' . pg_last_error());
+			echo "<select class='form-control col-md-3' name='dest' required>";
+	 			echo "<option value='' disabled selected >Destino del paquete</option>";
+				while ($row = pg_fetch_row($result1)){
+		 			echo "<option value='$row[0]'";
+		 			if($row[0]==$destino){
+		 				echo "selected";
+		 			}
+		 			echo ">$row[0]</option>";
+			 	}
+	 		echo "</select>";
+	      ?>
 	    </div>
 	    <div class="col-md-3"></div>	    
 	    <div class="col-md-12"></div>
