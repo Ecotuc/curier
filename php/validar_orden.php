@@ -82,6 +82,9 @@
 		case '10001':
 			$destino = 'Suchitepequez';
 			break;
+		case '02001':
+			$destino = 'Guastatoya';
+			break;
 
 	}
 	switch ($ido) {
@@ -106,6 +109,9 @@
 		case '10001':
 			$origen = 'Suchitepequez';
 			break;
+		case '02001':
+			$destino = 'Guastatoya';
+			break;
 
 	}
 	if(isset($_POST['submit'])){
@@ -113,6 +119,7 @@
 			or die('Could not connect: ' . pg_last_error());
 
 		$query = "INSERT INTO ordenes (status, destinatario, direccion, destino, origen, idd, ido, tienda) VALUES('$status', '$destinatario', '$dire', '$destino', '$origen', '$idd', '$ido', '$tienda')";
+		echo $idd;
 		$result = pg_query($dbconn, $query) or die('Query failed: ' . pg_last_error());
 
 		if($result){

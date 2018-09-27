@@ -19,13 +19,13 @@
 	      <label for="inputAddress">Lugar de origen</label>
 	      <?php 
 	      	$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998") or die('Could not connect: ' . pg_last_error());
-	      	$query = "SELECT DISTINCT origen FROM costos";
+	      	$query = "SELECT DISTINCT origen, ido FROM costos";
 			$result = pg_query($query) or die('Query failed: ' . pg_last_error());
 			echo "<select class='form-control col-md-3' name='origen' required>";
 	 				echo "<option value='' disabled selected";
 	 				echo ">Origen del paquete</option>";
 					while ($row = pg_fetch_row($result)){
-			 			echo "<option value='$row[0]'";
+			 			echo "<option value='$row[1]'";
 			 			if($row[0]==$origen){
 			 				echo "selected";
 			 			}
@@ -38,12 +38,12 @@
 	    <div class="form-group col-md-5">
 	      <label for="inputAddress">Lugar de destino</label>
 	      <?php 
-	      	$query2 = "SELECT DISTINCT destino FROM costos";
+	      	$query2 = "SELECT DISTINCT destino, idd FROM costos";
 			$result1 = pg_query($query2) or die('Query failed: ' . pg_last_error());
 			echo "<select class='form-control col-md-3' name='dest' required>";
 	 			echo "<option value='' disabled selected >Destino del paquete</option>";
 				while ($row = pg_fetch_row($result1)){
-		 			echo "<option value='$row[0]'";
+		 			echo "<option value='$row[1]'";
 		 			if($row[0]==$destino){
 		 				echo "selected";
 		 			}

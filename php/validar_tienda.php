@@ -59,12 +59,15 @@
 
 	$name=$_POST['nombre'];
 	$dire=$_POST['dir'];
-	$origen=$_POST['dest'];
-	$ido=$_POST['ido'];
+	$ido=$_POST['dest'];
 
 	if(isset($_POST['submit'])){
 		$dbconn = pg_connect("host=localhost dbname=curier user=postgres password=1998")
 			or die('Could not connect: ' . pg_last_error());
+		$query2 = "SELECT origen FROM costos WHERE ido ='$ido'";
+		$result2 = pg_query($dbconn, $query2) or die('Query failed: ' . pg_last_error());
+		$row2 = pg_fetch_row($result2);
+		$origen = $row2[0];
 		$query = "INSERT INTO tienda VALUES('$name', '$dire', '$ido','$origen')";
 		$result = pg_query($dbconn, $query) or die('Query failed: ' . pg_last_error());
 		if($result){
