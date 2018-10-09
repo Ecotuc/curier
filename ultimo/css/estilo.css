@@ -1,0 +1,163 @@
+.fondo{
+	background: url(../images/back1.jpg)no-repeat center center fixed;
+	background-size: cover;
+}
+
+.fondo2{
+	background: url(../images/original.jpg) no-repeat center center fixed;
+	background-size: cover;
+
+}
+
+.fondo3{
+	background: url(../images/mundo2.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.fondo4{
+	background: url(../images/w.png) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.fondo5{
+	background: url(../images/cot6.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+.fondo6{
+	background: url(../images/costo.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+.new{
+	display: flex;
+	justify-content: space-around;
+}
+
+.nav_logo{
+	margin-top: 7px;
+	margin-left: -7px;
+	margin-right: 7px ;
+	width: 130px;
+	height: 35px;
+}
+
+.body_logo{
+	margin-top: 8%;
+	width: 1000px;
+	height: 400px;
+}
+
+.divcenter {
+  margin: auto;
+  margin-top: 5%;
+  padding: 1%;
+  width:70%;
+  height:50%;
+  align-content: center;
+}
+.divcenter2 {
+  margin: auto;
+  margin-top: 2%;
+  padding: 1%;
+  width:70%;
+  height:50%;
+  align-content: center;
+}
+
+table {
+	margin-top: 190px;
+    border-collapse: collapse;
+    display:flex;
+    width:70%;
+    flex-direction: column;
+    margin-right:auto;
+    margin-left: auto;
+}
+
+tbody{
+	display:block;
+	overflow:auto;
+    height:222px;
+    width:100% 
+}
+thead tr{
+	display:inline-flex;
+	justify-content: space-around;
+	width: 100%;
+	margin: auto;
+}
+th, td {
+    padding: 8px;
+    text-align: left; 
+    width: 20%; 
+}
+
+tr:hover {background-color:#576574;}
+tr{
+	background-color: #353b48;
+	color: white;
+	display:flex;
+	justify-content: space-around;
+	border-bottom: 1px solid #ddd;
+}
+
+.esta{
+	color: white;
+}
+
+.form-register{
+	width: 100%;
+	max-width: 100%;
+	background: none;
+	border-radius: 7px;
+	margin-top: 70px;
+}
+.form_cot{
+	width: 95%;
+	max-width: 500px;
+	background: none;
+	border-radius: 7px;
+	margin-top: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.form-register-tiendas{
+	width: 95%;
+	max-width: 500px;
+	background: none;
+	border-radius: 7px;
+	margin-top: 260px;
+	margin-left: 60px;
+	margin-right: auto;
+}
+.form-register-costos{
+	width: 100%;
+	max-width: 600px;
+	background: none;
+	border-radius: 7px;
+	margin-top: 260px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.form-register-status{
+	width: 95%;
+	max-width: 500px;
+	background: none;		
+	border-radius: 7px;
+	margin-top: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.progress{
+	height: 30px;
+	color: white;
+	text-indent: center;
+	font-size: 118px;
+	margin-left: 8.3%;
+}
+
+label{
+	color:#130f40;
+}
+select{
+	height: 30px;
+}
